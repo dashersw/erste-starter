@@ -1,0 +1,30 @@
+.main-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-view img {
+  height: 140pt;
+  transition: opacity 1s;
+}
+
+.main-view h1 {
+  font-weight: 100;
+  font-size: 30pt;
+  margin: 50pt 0;
+  text-align: center;
+}
+
+.main-view input[type="button"] {
+  padding: 20pt;
+  border: 0;
+  background: #eee;
+  border-radius: 10pt;
+  margin: 10pt;
+}
+
+.main-view input[type="button"]:active {
+  background: #ccc;
+}
