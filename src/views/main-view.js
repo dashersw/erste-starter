@@ -1,13 +1,22 @@
-import { View } from 'erste'
+import { View, ViewManager } from 'erste'
+import ListView from './list-view'
 
 import './main-view.css'
 
 export default class MainView extends View {
+  constructor() {
+    super()
+
+    this.vm = new ViewManager(this)
+  }
+
+  onAfterRender() {
+    this.vm.setCurrentView(new ListView(this.vm))
+  }
+
   template() {
-    return pug`
-      .main-view
-        img(src="static/logo.png")
-        h1 Welcome to your erste app
+    return `
+      <main-view></main-view>
     `
   }
 }
